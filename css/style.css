@@ -1,0 +1,643 @@
+html {
+    font-size: 62.5%;
+    /*デフォルトサイズ16pxの62.5%つまり10px,1em=10px*/
+    /*em≠rem*/
+}
+
+body {
+    font-size: 16px;
+    font-family: "Noto Sans CJK JP",serif;
+    line-height: 1.5;
+    /* color: #333333; */
+}
+
+a {
+    text-decoration: none;
+    /* color: #444444; */
+}
+
+ul {
+  	list-style: none;
+}
+
+.container {
+    width: 100%;
+  	max-width: 1170px;
+	  margin: 0 auto;
+}
+
+/*--------------------------------------
+header
+--------------------------------------*/
+.header {
+  width: 100%;
+  padding: 30px 0;
+  position: fixed;
+  z-index: 10;
+}
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px;
+}
+
+.header img {
+}
+
+.header__logoimg {
+  /* font-family: '筑紫A丸ゴシック'; */
+  font-family: "クレー";
+  color: #fffff7;
+  font-size: 2rem;
+}
+
+.header__right {
+  display: flex;
+}
+
+.header__nav {
+  display: flex;
+}
+
+.header__nav li {
+  font-size: 1.5rem;
+}
+
+.header__nav a {
+  color: #fffff7;
+}
+
+.header__nav li:nth-child(n+2) {
+  margin-left: 30px;
+}
+
+header .fa-envelope {
+  margin-left: 30px;
+  color: #fffff7;
+  position: relative;
+  top: -2px;
+}
+
+.hamburger {
+  display : none;
+  position: fixed;
+  z-index : 3;
+  right : 90px;
+  top   : 30px;
+  width : 42px;
+  height: 42px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.hamburger p {
+    margin-top: 15px;
+    font-size: 12px;
+    line-height: 5.3;
+    color: #fff;
+}
+
+.hamburger span {
+  display : block;
+  position: absolute;
+  width   : 30px;
+  height  : 2px ;
+  left    : 6px;
+  background : #fff;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition   : 0.3s ease-in-out;
+  transition        : 0.3s ease-in-out;
+}
+.hamburger span:nth-child(1) {
+  top: 10px;
+}
+.hamburger span:nth-child(2) {
+  top: 20px;
+}
+.hamburger span:nth-child(3) {
+  top: 30px;
+}
+
+/*--------------------------------------
+top
+--------------------------------------*/
+.top {
+  background-image: url("../img/PENTAFANPK98003_TP_V.jpg");
+  background-size: cover;
+  color: #fff;
+  height: 768px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.top__inner {
+}
+
+.top__inner h2 {
+  font-size: 4.3rem;
+  letter-spacing: 6px;
+  font-weight: normal;
+  font-family: "クレー";
+}
+
+.header__subtitle {
+  font-size: 2.4rem;
+  font-family: "クレー";
+}
+
+.top__inner img {
+  /* width: 100%; */
+  /* max-width: 424px; */
+  margin-top: 35px;
+}
+
+.top__titlelogo {
+  /* font-family: '筑紫A丸ゴシック'; */
+  font-family: "クレー";
+  color: #fffff7;
+  font-size: 6.4rem;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/*--------------------------------------
+detail
+--------------------------------------*/
+.detail {
+  padding: 128px 0 100px 0;
+  background-image: url("../img/bgi.png");
+  background-size: cover;
+}
+
+.detail__inner img {
+  width: 100%;
+  max-width: 570px;
+  margin-top: 23px;
+}
+
+.detail__img1 {
+  margin-left: 52px;
+}
+
+.detail__img2 {
+  margin-right: 52px;
+}
+
+.detail__item {
+  width: 100%;
+  max-width: 538px;
+  font-weight: 300;
+  color: #372800;
+}
+
+.detail__title {
+  font-size: 6.4rem;
+}
+
+.detail__subtitle {
+  font-size: 3.1rem;
+  font-weight: lighter;
+}
+
+.detail__content {
+  display: flex;
+  /* justify-content: space-between; */
+}
+
+.dc2 {
+  flex-direction: row-reverse;
+  margin-top: 88px;
+}
+
+.detail__texts {
+  margin-top: 40px;
+}
+
+/*--------------------------------------
+information
+--------------------------------------*/
+.information {
+  padding: 100px 0 88px 0;
+  text-align: center;
+  background-image: url("../img/ogasutaFJ01_TP_V.jpg");
+  background-size: cover;
+}
+
+.information h2 {
+  font-size: 6.4rem;
+  color: #fffff7;
+}
+
+.information__subtitle {
+  font-size: 3.1rem;
+  color: #fffff7;
+}
+
+.information__logo {
+  width: 100%;
+  max-width: 230px;
+  height: 230px;
+  object-fit: cover;
+}
+
+.information__inner {
+  display: flex;
+  background-color: #fff;
+  padding: 52px 45px;
+  margin-top: 38px;
+}
+
+.information__outer {
+  display: inline-block;
+}
+
+.information__text {
+  width: 342px;
+  margin-top: 20px;
+  font-size: 1.8rem;
+  line-height: 27px;
+  color: #626d83;
+}
+
+.information__right {
+  margin-left: 90px;
+}
+
+/*--------------------------------------
+MENU
+--------------------------------------*/
+.menu {
+  padding: 100px 0 89px 0;
+  text-align: center;
+  background-image: url("../img/bgi.png");
+  background-size: cover;
+}
+
+.menu h2 {
+  font-size: 6.3rem;
+}
+
+.menu__subtitle {
+  font-size: 3.1rem;
+}
+
+.menu img {
+  width: 100%;
+  max-width: 275px;
+  height: 275px;
+  object-fit: cover;
+}
+
+.menu__inner {
+  display: flex;
+  justify-content: space-around;
+  background-color: #fff;
+  padding: 71px 0 43px 0;
+  margin-top: 40px;
+}
+
+.menu__name {
+  margin-top: 30px;
+}
+
+.menu__price {
+  color: #b84b1b;
+}
+
+.menu__text {
+  width: 448px;
+  margin: 0 auto;
+  margin-top: 40px;
+  line-height: 27px;
+}
+
+/*--------------------------------------
+ACCESS
+--------------------------------------*/
+.access {
+  background-image: url("../img/bgi2.png");
+  background-size: cover;
+  padding: 100px 0 82px 0;
+  text-align: center;
+  color: #372800;
+}
+
+.access h2 {
+  font-size: 6.3rem;
+}
+
+.access__subtitle {
+  font-size: 3.1rem;
+}
+
+.access__mapwrapper {
+  overflow: hidden;
+  position: relative;
+  height: 0;
+  /* padding-bottom: 56.25%; */
+  padding-bottom: 30%;
+  margin-top: 38px;
+}
+
+.access__mapwrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.access__text {
+  margin-top: 40px;
+}
+
+/*--------------------------------------
+footer
+--------------------------------------*/
+footer {
+  background-image: url("../img/bg.png");
+  background-size: cover;
+  padding: 60px 0 47px 0;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+
+.footer__address {
+  margin-top: 30px;
+}
+
+.footer__mail {
+  color: #372800;
+  background-color: #ebdbb0;
+  padding: 5px 44px 5px 40px;
+}
+
+footer .fa-envelope {
+  color: #372800;
+  margin-top: 20px;
+  margin-right: 5px;
+}
+
+.footer__nav {
+  margin-top: 51px;
+}
+
+.footer__nav a {
+  color: #fff;
+}
+
+.footer__nav {
+  display: flex;
+  justify-content: center;
+}
+
+.footer__nav li:nth-child(n+2) {
+  margin-left: 30px;
+}
+
+.footer__copy {
+  font-size: 1.4rem;
+  margin-top: 49px;
+}
+
+#page_top{
+  position: absolute;
+  right: 98px;
+  bottom: 100px;
+}
+
+.footer__logoimg {
+  /* font-family: '筑紫A丸ゴシック'; */
+  font-family: "クレー";
+  color: #fffff7;
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 1024px)  {
+/*--------------------------------------
+header
+--------------------------------------*/
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px;
+}
+
+/*--------------------------------------
+detail
+--------------------------------------*/
+.detail__inner {
+  padding: 0 15px;
+}
+
+.detail__img1 {
+  margin-left: 50px;
+}
+
+.detail__img2 {
+  margin-right: 50px;
+}
+/*--------------------------------------
+MENU
+--------------------------------------*/
+.menu__inner {
+  padding: 71px 15px 43px 15px;
+}
+}
+
+@media screen and (max-width: 768px)  {
+
+/*--------------------------------------
+header
+--------------------------------------*/
+.header__inner {
+  display: flex;
+  justify-content: initial;
+}
+
+.header img {
+  max-width: 120px;
+}
+
+.header__nav {
+  display: none;
+}
+
+.header__nav li {
+  font-size: 1rem;
+}
+
+.header__nav li:nth-child(n+2) {
+  margin-left: 10px;
+}
+
+header .fa-envelope {
+  display: none;
+  position: relative;
+  top: -2px;
+}
+
+.hamburger {
+  display : block;
+  position: fixed;
+  z-index : 3;
+  right : 15px;
+  top   : 15px;
+  width : 42px;
+  height: 42px;
+  cursor: pointer;
+  text-align: center;
+}
+
+/*--------------------------------------
+top
+--------------------------------------*/
+.top {
+  background-image: url("../img/PENTAFANPK98003_TP_V.jpg");
+  background-size: cover;
+  color: #fff;
+  height: 650px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.top__inner h2 {
+  font-size: 3.1rem;
+  letter-spacing: 0px;
+}
+
+.top__inner p {
+  font-size: 1.5rem;
+}
+
+.top__inner img {
+  width: 100%;
+  max-width: 150px;
+  margin-top: 35px;
+}
+
+/*--------------------------------------
+detail
+--------------------------------------*/
+.detail__inner{
+  text-align: center;
+}
+
+.detail__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail__item {
+  width: 100%;
+  max-width: initial;
+}
+
+.detail__title {
+  font-size: 6.4rem;
+  text-align: center;
+}
+
+.detail__subtitle {
+  font-size: 3.1rem;
+  text-align: center;
+}
+
+
+.detail__img1 {
+  margin-left: 0px;
+}
+
+.detail__img2 {
+  margin-right: 0px;
+}
+
+.detail__texts {
+  text-align: left;
+}
+
+/*--------------------------------------
+information
+--------------------------------------*/
+.information h2 {
+  font-size: 4.5rem;
+}
+
+.information__subtitle {
+  font-size: 3.1rem;
+}
+
+.information__inner {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 30px 15px;
+  margin-top: 38px;
+}
+
+.information__right {
+  margin-left: 0px;
+}
+
+.imformation__titlelogo {
+  width: 100%;
+  max-width: 300px;
+  margin-top: 30px;
+}
+
+.information__text {
+  width: 100%;
+  margin-top: 20px;
+  font-size: 1.5rem;
+  line-height: 27px;
+  color: #626d83;
+}
+
+/*--------------------------------------
+MENU
+--------------------------------------*/
+.menu__textwrapper {
+  padding: 0 15px;
+}
+
+.menu__text {
+  width: 100%;
+}
+
+.menu__inner {
+  display: flex;
+  flex-direction: column;
+  padding: 71px 0 43px 0;
+}
+
+.menu__name {
+  margin-top: 10px;
+}
+
+.menu__item:nth-child(n+2) {
+  margin-top: 40px;
+}
+
+/*--------------------------------------
+footer
+--------------------------------------*/
+.footer__nav {
+  display: flex;
+  justify-content: center;
+}
+
+.footer__nav li:nth-child(n+2) {
+  margin-left: 20px;
+}
+
+#page_top{
+  position: absolute;
+  right: 15px;
+  bottom: 30px;
+}
+
+}
