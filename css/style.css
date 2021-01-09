@@ -68,6 +68,28 @@ header
   color: #fffff7;
 }
 
+.header__nav a {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+.header__nav a::after {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: #fffff7;
+  transform: scale(0, 1);
+  transform-origin: center top;
+  transition: transform .3s;
+}
+.header__nav a:hover::after {
+  transform: scale(1, 1);
+}
+
+
 .header__nav li:nth-child(n+2) {
   margin-left: 30px;
 }
@@ -125,7 +147,7 @@ top
 .top {
   background-image: url("../img/PENTAFANPK98003_TP_V.jpg");
   background-size: cover;
-  color: #fff;
+  color: #fffff7;
   height: 768px;
   text-align: center;
   display: flex;
@@ -167,7 +189,7 @@ detail
 --------------------------------------*/
 .detail {
   padding: 128px 0 100px 0;
-  background-image: url("../img/bgi.png");
+  background-image: url("../img/whitepaint.jpg");
   background-size: cover;
 }
 
@@ -178,11 +200,11 @@ detail
 }
 
 .detail__img1 {
-  margin-left: 52px;
+  margin-left: 56px;
 }
 
 .detail__img2 {
-  margin-right: 52px;
+  margin-right: 56px;
 }
 
 .detail__item {
@@ -208,6 +230,10 @@ detail
 
 .dc2 {
   flex-direction: row-reverse;
+  margin-top: 88px;
+}
+
+.dc3 {
   margin-top: 88px;
 }
 
@@ -244,7 +270,7 @@ information
 
 .information__inner {
   display: flex;
-  background-color: #fff;
+  background-color: #FFFFF7;
   padding: 52px 45px;
   margin-top: 38px;
 }
@@ -271,7 +297,7 @@ MENU
 .menu {
   padding: 100px 0 89px 0;
   text-align: center;
-  background-image: url("../img/bgi.png");
+  background-image: url("../img/whitepaint.jpg");
   background-size: cover;
 }
 
@@ -293,7 +319,7 @@ MENU
 .menu__inner {
   display: flex;
   justify-content: space-around;
-  background-color: #fff;
+  background-color: #FFFFF7;
   padding: 71px 0 43px 0;
   margin-top: 40px;
 }
@@ -320,19 +346,55 @@ ACCESS
   background-image: url("../img/bgi2.png");
   background-size: cover;
   padding: 100px 0 82px 0;
-  text-align: center;
+  /* text-align: center; */
   color: #372800;
 }
 
 .access h2 {
   font-size: 6.3rem;
+  text-align: center;
 }
 
 .access__subtitle {
   font-size: 3.1rem;
+  text-align: center;
 }
 
-.access__mapwrapper {
+.access__inner {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+}
+
+.access__address {
+  /* text-align: left; */
+}
+
+.access__detail {
+  display: inline-block;
+  margin-top: 30px;
+  text-align: left;
+}
+
+.access__detail table {
+  margin-top: 30px;
+  line-height: 2;
+}
+
+.brsp {
+  display: none;
+}
+
+.access__detail th, td{
+  /* text-align: left; */
+  letter-spacing: 2px;
+}
+
+th {
+  padding-right: 50px;
+}
+
+/* .access__mapwrapper { */
   overflow: hidden;
   position: relative;
   height: 0;
@@ -341,7 +403,7 @@ ACCESS
   margin-top: 38px;
 }
 
-.access__mapwrapper iframe {
+/* .access__mapwrapper iframe { */
   position: absolute;
   top: 0;
   left: 0;
@@ -353,11 +415,20 @@ ACCESS
   margin-top: 40px;
 }
 
+.access__subtext {
+  /* text-align: left; */
+  margin-top: 15px;
+}
+
+.access__subtext2 {
+  margin-top: 15px;
+}
+
 /*--------------------------------------
 footer
 --------------------------------------*/
 footer {
-  background-image: url("../img/bg.png");
+  background-image: url("../img/rosewood.jpg");
   background-size: cover;
   padding: 60px 0 47px 0;
   text-align: center;
@@ -416,6 +487,61 @@ footer .fa-envelope {
   font-size: 2rem;
 }
 
+.popup {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: .6s;
+}
+.popup.is-show {
+  opacity: 1;
+  visibility: visible;
+}
+.popup-inner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 80%;
+  max-width: 600px;
+  padding: 50px;
+  background-color: #fff;
+  z-index: 2;
+}
+.popup-inner img {
+  width: 100%;
+}
+.close-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  cursor: pointer;
+}
+.close-btn i {
+  font-size: 20px;
+  color: #333;
+}
+.black-background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.8);
+  z-index: 1;
+  cursor: pointer;
+}
+
+
 @media screen and (max-width: 1024px)  {
 /*--------------------------------------
 header
@@ -446,6 +572,26 @@ MENU
 .menu__inner {
   padding: 71px 15px 43px 15px;
 }
+
+/*--------------------------------------
+ACCESS
+--------------------------------------*/
+.access__inner {
+  display: block;
+  /* flex-direction: column; */
+  text-align: center;
+  margin-top: 0;
+}
+
+.access__detail {
+  /* text-align: center; */
+}
+
+.access__detail table {
+  margin-bottom: 30px;
+}
+
+
 }
 
 @media screen and (max-width: 768px)  {
@@ -620,6 +766,39 @@ MENU
 
 .menu__item:nth-child(n+2) {
   margin-top: 40px;
+}
+
+/*--------------------------------------
+ACCESS
+--------------------------------------*/
+
+ .access__mapwrapper {
+  overflow: hidden;
+  position: relative;
+  height: 0;
+  padding-bottom: 56.25%;
+  /* padding-bottom: 30%; */
+  margin-top: 38px;
+}
+
+.access__inner {
+  padding: 0 15px;
+}
+
+.brsp {
+  display: block;
+}
+
+ .access__mapwrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.access__detail tr {
+  white-space: nowrap;
 }
 
 /*--------------------------------------
