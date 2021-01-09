@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
   <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 
 </head>
 <body>
@@ -21,10 +22,10 @@
         </h1>
         <div class="header__right">
           <ul class="header__nav">
-            <li><a href="">CONCEPT</a></li>
-            <li><a href="">INFOMATION</a></li>
-            <li><a href="">MENU</a></li>
-            <li><a href="">ACCESS</a></li>
+            <li><a href="#detail__jump">CONCEPT</a></li>
+            <li><a href="#information__jump">INFOMATION</a></li>
+            <li><a href="#menu__jump">MENU</a></li>
+            <li><a href="#access__jump">ACCESS</a></li>
           </ul>
           <p><i class="far fa-envelope"></i></p>
           <div class="hamburger">
@@ -50,7 +51,7 @@
         </div>
       </div>
     </div>
-    <section class="detail">
+    <section class="detail" id="detail__jump">
       <div class="container">
         <div class="detail__inner">
           <div class="detail__content">
@@ -67,22 +68,34 @@
           </div>
           <div class="detail__content dc2">
             <div class="detail__item">
+              <h2 class="detail__title">MEMORIES</h2>
+              <h3 class="detail__subtitle">大切な人と</h3>
+              <div class="detail__texts">
+                <p>コーヒーを通じて親しい友人、大切な人とかけがえのない時間を過ごしていただけたら嬉しく思います。そのためにコーヒーだけでなく極上の空間、お食事もご用意しておりますのでぜひ足を運んでください！これはサンプルサイトです。</p>
+              </div>
+            </div>
+            <div class="detail__img2">
+              <img src="img/nathan-dumlao-6VhPY27jdps-unsplash.jpg" alt="三つのコーヒー">
+            </div>
+          </div>
+          <div class="detail__content dc3">
+            <div class="detail__item">
               <h2 class="detail__title">SELECT</h2>
-              <h3 class="detail__subtitle">厳選しています</h3>
+              <h3 class="detail__subtitle">極上の一杯で</h3>
               <div class="detail__texts">
                 <p>私の好きな風味のコーヒー豆があります。でもそれは皆さんも好きだとは限りません。</p>
                 <p>いろんな人に楽しんでもらえるようにいろんな産地の豆をご用意しています。ご自分のお気に入りを見つけて楽しんでください。</p>
                 <p>ちょっと酸味のある味が好きなんだけど、どれかわからない。そんなお客様にもおすすめできますのでお気軽にお聞きください。これはサンプルサイトです。。</p>
               </div>
             </div>
-            <div class="detail__img2">
+            <div class="detail__img1">
               <img src="img/COFFEE0I9A8957_TP_V.jpg" alt="厳選マメ">
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section class="information">
+    <section class="information" id="information__jump">
       <div class="container">
         <div class="information__outer">
           <h2>INFORMATION</h2>
@@ -101,7 +114,7 @@
         </div>
       </div>
     </section>
-    <section class="menu">
+    <section class="menu" id="menu__jump">
       <div class="container">
         <h2>MENU</h2>
         <p class="menu__subtitle">メニュー</p>
@@ -128,14 +141,40 @@
 
       </div>
     </section>
-    <section class="access">
+    <section class="access" id="access__jump">
       <div class="container">
         <h2>ACCESS</h2>
         <p class="access__subtitle">アクセスマップ</p>
-        <div class="access__mapwrapper">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.7479754683704!2d139.74324421525216!3d35.65858048019956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bbd9009ec09%3A0x481a93f0d2a409dd!2z5p2x5Lqs44K_44Ov44O8!5e0!3m2!1sja!2sjp!4v1609375740025!5m2!1sja!2sjp" width="1170" height="341" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <div class="access__inner">
+          <div class="access__detail">
+            <p class="access__address">〒123−4567 東京都高引区阿豆1−2−3</p>
+            <p class="access__subtext">JRなんとか駅なんとか口より徒歩３分です。<br>なんとか線なんとか駅なんとか口より徒歩５分です。</p>
+            <p class="access__subtext2">※フリーWi-Fiございます。</p>
+            <table>
+              <tbody>
+                <tr class="tr1">
+                  <th>平日</th>
+                  <td>12:00 – 17:00 / <br class="brsp">18:00 – 24:00</td>
+                </tr>
+                <tr class="tr2">
+                  <th>土日祝</th>
+                  <td>12:00 – 22:00</td>
+                </tr>
+                <tr class="tr3">
+                  <th>電話番号</th>
+                  <td>012-345-6789</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="access__mapwrapper">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.7479754683704!2d139.74324421525216!3d35.65858048019956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bbd9009ec09%3A0x481a93f0d2a409dd!2z5p2x5Lqs44K_44Ov44O8!5e0!3m2!1sja!2sjp!4v1609375740025!5m2!1sja!2sjp" width="700" height="341" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          </div>
         </div>
-        <p class="access__text">JRなんとか駅なんとか口より徒歩３分です。<br>なんとか線なんとか駅なんとか口より徒歩５分です。</p>
+
+
+
+        <!-- <p class="access__text">JRなんとか駅なんとか口より徒歩３分です。<br>なんとか線なんとか駅なんとか口より徒歩５分です。</p> -->
       </div>
     </section>
   </main>
@@ -162,5 +201,15 @@
       </div>
     </div>
   </footer>
+
+  <div class="popup" id="js-popup">
+    <div class="popup-inner">
+      <div class="close-btn" id="js-close-btn"><i class="fas fa-times"></i></div>
+      <p>コーディング練習用のサンプルサイトです。</p>
+    </div>
+    <div class="black-background" id="js-black-bg"></div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
